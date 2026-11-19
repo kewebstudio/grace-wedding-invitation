@@ -53,7 +53,7 @@ const weddingData = {
 
   // INVITATION TEMPLATES
   invitation: {
-    image: "/images/invitation.jpg",
+    image: "/images/wedding.jpg",
     dateImage: "/images/date.jpg",
     rsvpImage: "/images/rsvp.jpg",
   },
@@ -108,7 +108,7 @@ const weddingData = {
       "We look forward to sharing this beautiful beginning with our family and friends. Your love and blessings will make our day even more special.",
 
     downloadText: "Download Wedding Invitation",
-    downloadFile: "/invitation.pdf",
+    downloadFile: "/wedding.pdf",
   },
 };
 

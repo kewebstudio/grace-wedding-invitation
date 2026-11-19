@@ -36,7 +36,7 @@ export default function RSVP() {
   const [showInvitation, setShowInvitation] = useState(false);
 
   const { rsvp, invitation } = weddingData;
-  const invitationImage = invitation?.image || "/images/invitation.jpg";
+  const invitationImage = invitation?.image || "/images/wedding.jpg";
 
   const handleSubmit = (e) => {
     e.preventDefault();

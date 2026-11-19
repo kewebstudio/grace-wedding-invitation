@@ -174,13 +174,27 @@ export default function ClosedDoors({ onContinue }) {
           box-sizing: border-box;
         }
 
+        html,
+        body,
+        #root {
+          margin: 0;
+          width: 100%;
+          min-height: 100%;
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
         .wedding-opening {
           position: relative;
           width: 100%;
           height: 100vh;
           height: 100dvh;
-          min-height: 500px;
+          min-height: 0;
           overflow: hidden;
+          overscroll-behavior: none;
+          touch-action: pan-x pan-y;
           background: #1c130c;
           perspective: 1800px;
           isolation: isolate;
@@ -243,48 +257,48 @@ export default function ClosedDoors({ onContinue }) {
         }
 
         .story-link {
-  position: relative;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 18px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #654522;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2.2px;
-  text-shadow: 0 1px 5px rgba(255, 239, 210, 0.5);
-  cursor: pointer;
-  pointer-events: auto;
-  -webkit-tap-highlight-color: transparent;
-}
+          position: relative;
+          z-index: 2;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 12px 18px;
+          border: none;
+          outline: none;
+          background: transparent;
+          color: #654522;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 2.2px;
+          text-shadow: 0 1px 5px rgba(255, 239, 210, 0.5);
+          cursor: pointer;
+          pointer-events: auto;
+          -webkit-tap-highlight-color: transparent;
+        }
 
-.story-link-ornament {
-  color: #9b713c;
-  font-size: 18px;
-  text-shadow: 0 0 8px rgba(218, 177, 105, 0.6);
-}
+        .story-link-ornament {
+          color: #9b713c;
+          font-size: 18px;
+          text-shadow: 0 0 8px rgba(218, 177, 105, 0.6);
+        }
 
-.story-link-text {
-  white-space: nowrap;
-}
+        .story-link-text {
+          white-space: nowrap;
+        }
 
-.story-link-arrow {
-  color: #9b713c;
-  font-size: 19px;
-  font-weight: 600;
-}
+        .story-link-arrow {
+          color: #9b713c;
+          font-size: 19px;
+          font-weight: 600;
+        }
 
-.story-link:focus-visible {
-  outline: 1px solid #9b713c;
-  outline-offset: 5px;
-  border-radius: 20px;
-}
+        .story-link:focus-visible {
+          outline: 1px solid #9b713c;
+          outline-offset: 5px;
+          border-radius: 20px;
+        }
 
         /* SPARKLES AROUND STORY LINK */
 
@@ -397,7 +411,7 @@ export default function ClosedDoors({ onContinue }) {
           background-position: right center;
         }
 
-        /* SLOW DOOR OPENING */
+        /* SLOW INWARD DOOR OPENING */
 
         .door-scene.opening .door-left {
           transform: rotateY(110deg);
@@ -505,7 +519,9 @@ export default function ClosedDoors({ onContinue }) {
 
         @media (max-width: 600px) {
           .wedding-opening {
-            min-height: 500px;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 0;
           }
 
           .couple-stage {
@@ -531,7 +547,9 @@ export default function ClosedDoors({ onContinue }) {
 
         @media (max-height: 600px) {
           .wedding-opening {
-            min-height: 450px;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 0;
           }
 
           .couple-stage {
