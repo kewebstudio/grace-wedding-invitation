@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: #fffaf2;
+  color: #493522;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: visible;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: 'Italiana', serif;
+  font-weight: 400;
+}
+
+p {
+  margin-top: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* =========================================
+   IMAGES AND MEDIA
+========================================= */
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+/* =========================================
+   SCROLLING
+========================================= */
+
+html,
+body {
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+/* =========================================
+   WEDDING COLOUR VARIABLES
+========================================= */
+
+:root {
+  --ivory: #fffaf2;
+  --cream: #fff4e4;
+  --champagne: #d6b477;
+  --gold: #c49a48;
+  --dark-gold: #9b7136;
+  --brown: #65452d;
+  --dark-brown: #49301c;
+  --soft-brown: #92775e;
+  --white: #ffffff;
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: #e8d3aa;
+  color: #49301c;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--dark-gold);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
